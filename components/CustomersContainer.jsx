@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const style = {
   position: "absolute",
@@ -122,6 +123,20 @@ const CustomersContainer = () => {
               color="secondary"
               required
             />
+          </Typography>
+          <Typography id="modal-modal-footer" variant="h6" component="h2">
+            <button
+              className="bg-red-100 px-2 py-1 text-red-600 rounded-lg hover:bg-red-600 hover:text-white"
+              onClick={handleClose}
+            >
+              Close
+            </button>
+            <button
+              className="bg-purple-100 px-2 py-1 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white"
+              onClick={handleClose}
+            >
+              Save
+            </button>
           </Typography>
         </Box>
       </Modal>
