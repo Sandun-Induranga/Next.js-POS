@@ -9,7 +9,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const SlideBar = () => {
   return (
-    <section className="w-20 h-screen bg-white border-r border-gray-200 flex items-center flex-col gap-6">
+    <section className="w-20 h-screen bg-white border-r border-gray-200 flex items-center flex-col gap-6 fixed">
       <FiSlack size={40} />
       <Link href="/" className="p-2 bg-purple-600 rounded-lg text-white">
         <RxDashboard size={22} />
