@@ -17,7 +17,7 @@ const SlideBar = () => {
 
       <Link
         href="/customers"
-        className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
+        className={"p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"}
       >
         <BiUser size={22} />
       </Link>
