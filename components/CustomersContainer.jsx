@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 
 const style = {
   position: "absolute",
@@ -88,7 +87,12 @@ const CustomersContainer = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography
+            id="modal-modal-title"
+            variant="div"
+            component="div"
+            className="!text-gray-600 !font-semibold !text-xl"
+          >
             Manage Customers
           </Typography>
           <Typography
@@ -124,15 +128,20 @@ const CustomersContainer = () => {
               required
             />
           </Typography>
-          <Typography id="modal-modal-footer" variant="h6" component="h2">
+          <Typography
+            id="modal-modal-footer"
+            variant="div"
+            component="div"
+            className="!flex !justify-end !gap-4 !mt-4"
+          >
             <button
-              className="bg-red-100 px-2 py-1 text-red-600 rounded-lg hover:bg-red-600 hover:text-white"
+              className="bg-red-100 px-4 py-2 text-red-600 rounded-lg hover:bg-red-600 hover:text-white"
               onClick={handleClose}
             >
               Close
             </button>
             <button
-              className="bg-purple-100 px-2 py-1 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white"
+              className="bg-green-100 px-4 py-2 text-green-600 rounded-lg hover:bg-green-600 hover:text-white"
               onClick={handleClose}
             >
               Save
