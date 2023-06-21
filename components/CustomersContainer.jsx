@@ -4,9 +4,14 @@ import { MdPlaylistRemove } from "react-icons/md";
 
 const CustomersContainer = () => {
   return (
-    <div className="p-10 bg-gray-100 min-h-screen">
+    <div className="p-10 bg-gray-100 min-h-screen outline-none border-none">
+      <input
+        type="search"
+        className="lg:w-1/3 p-2 rounded-lg mb-2"
+        placeholder="Search"
+      />
       <ul>
-        <li className="grid grid-cols-5 justify-center text-center bg-purple-600 py-2 rounded-lg text-white">
+        <li className="grid grid-cols-5 justify-center text-center bg-purple-600 py-2 rounded-lg text-white mb-2">
           <h1>Customer ID</h1>
           <h1>Name</h1>
           <h1>Address</h1>
@@ -19,8 +24,28 @@ const CustomersContainer = () => {
           <h1>Galle</h1>
           <h1>0762334674</h1>
           <div className="flex justify-center gap-4">
-            <FiEdit2 size={18} />
-            <MdPlaylistRemove size={18} />
+            <FiEdit2 size={18} className="text-green-400" />
+            <MdPlaylistRemove size={18} className="text-red-400" />
+          </div>
+        </li>
+        <li className="grid grid-cols-5 justify-center text-center bg-white py-2 rounded-lg text-gray-600 mt-1">
+          <h1>C00-001</h1>
+          <h1>Dasun</h1>
+          <h1>Galle</h1>
+          <h1>0762334674</h1>
+          <div className="flex justify-center gap-4">
+            <FiEdit2 size={18} className="text-green-400" />
+            <MdPlaylistRemove size={18} className="text-red-400" />
+          </div>
+        </li>
+        <li className="grid grid-cols-5 justify-center text-center bg-white py-2 rounded-lg text-gray-600 mt-1">
+          <h1>C00-001</h1>
+          <h1>Dasun</h1>
+          <h1>Galle</h1>
+          <h1>0762334674</h1>
+          <div className="flex justify-center gap-4">
+            <FiEdit2 size={18} className="text-green-400" />
+            <MdPlaylistRemove size={18} className="text-red-400" />
           </div>
         </li>
       </ul>
