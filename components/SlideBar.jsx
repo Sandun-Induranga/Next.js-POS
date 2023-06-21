@@ -23,7 +23,7 @@ const SlideBar = () => {
       </Link>
 
       <Link
-        href="/customers"
+        href="/items"
         className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
       >
         <HiOutlineShoppingBag size={22} />
