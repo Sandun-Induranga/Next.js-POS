@@ -2,10 +2,27 @@
 import React, { useState } from "react";
 import { FiEdit2 } from "react-icons/fi";
 import { MdPlaylistRemove } from "react-icons/md";
-import { Modal, ModalBody, ModalFooter, Button } from "reactstrap";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid rgb(243 244 246 / var(--tw-bg-opacity))",
+  boxShadow: 24,
+  borderRadius: "10px",
+  p: 4,
+};
 
 const CustomersContainer = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div className="p-10 bg-gray-100 min-h-screen outline-none border-none">
@@ -15,7 +32,10 @@ const CustomersContainer = () => {
           className="lg:w-1/3 p-2 rounded-lg mb-2"
           placeholder="Search"
         />
-        <button className="bg-purple-100 px-4 py-2 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white">
+        <button
+          className="bg-purple-100 px-4 py-2 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white"
+          onClick={handleOpen}
+        >
           Add New Customer
         </button>
       </section>
@@ -58,33 +78,20 @@ const CustomersContainer = () => {
           </div>
         </li>
       </ul>
-      <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
-        <div className=" modal-header">
-          <h5 className=" modal-title" id="exampleModalLabel">
-            Modal title
-          </h5>
-          <button
-            aria-label="Close"
-            className=" close"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            <span aria-hidden={true}>×</span>
-          </button>
-        </div>
-        <ModalBody>...</ModalBody>
-        <ModalFooter>
-          <Button
-            color="secondary"
-            type="button"
-            onClick={() => setModalOpen(!modalOpen)}
-          >
-            Close
-          </Button>
-          <Button color="primary" type="button">
-            Save changes
-          </Button>
-        </ModalFooter>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
       </Modal>
     </div>
   );
