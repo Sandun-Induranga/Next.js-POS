@@ -5,6 +5,7 @@ import { MdPlaylistRemove } from "react-icons/md";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
 
 const style = {
   position: "absolute",
@@ -17,6 +18,7 @@ const style = {
   boxShadow: 24,
   borderRadius: "10px",
   p: 4,
+  color: "rgb(55 65 81 / var(--tw-text-opacity))",
 };
 
 const CustomersContainer = () => {
@@ -86,10 +88,40 @@ const CustomersContainer = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            Manage Customers
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          <Typography
+            className="!mt-6 !w-full !flex !flex-col !gap-4"
+            id="modal-modal-description"
+          >
+            <TextField
+              id="outlined-basic"
+              label="Customer ID"
+              variant="outlined"
+              color="secondary"
+              required
+            />
+            <TextField
+              id="outlined-basic"
+              label="Customer Name"
+              variant="outlined"
+              color="secondary"
+              required
+            />
+            <TextField
+              id="outlined-basic"
+              label="Address"
+              variant="outlined"
+              color="secondary"
+              required
+            />
+            <TextField
+              id="outlined-basic"
+              label="Phone Number"
+              variant="outlined"
+              color="secondary"
+              required
+            />
           </Typography>
         </Box>
       </Modal>
