@@ -5,6 +5,7 @@ import { FiSlack } from "react-icons/fi";
 import { BiUser } from "react-icons/bi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { BsCart2 } from "react-icons/bs";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const SlideBar = () => {
   return (
@@ -33,6 +34,13 @@ const SlideBar = () => {
         className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
       >
         <BsCart2 size={22} />
+      </Link>
+
+      <Link
+        href="/customers"
+        className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
+      >
+        <IoSettingsOutline size={22} />
       </Link>
     </section>
   );
