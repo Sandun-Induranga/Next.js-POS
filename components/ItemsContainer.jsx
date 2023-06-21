@@ -103,7 +103,7 @@ const ItemsContainer = () => {
             component="div"
             className="!text-gray-600 !font-semibold !text-xl"
           >
-            Manage Customers
+            Manage Items
           </Typography>
           <Typography
             className="!mt-6 !w-full !flex !flex-col !gap-4"
@@ -111,28 +111,28 @@ const ItemsContainer = () => {
           >
             <TextField
               id="outlined-basic"
-              label="Customer ID"
+              label="Item Code"
               variant="outlined"
               color="secondary"
               required
             />
             <TextField
               id="outlined-basic"
-              label="Customer Name"
+              label="Description"
               variant="outlined"
               color="secondary"
               required
             />
             <TextField
               id="outlined-basic"
-              label="Address"
+              label="Qty On hand"
               variant="outlined"
               color="secondary"
               required
             />
             <TextField
               id="outlined-basic"
-              label="Phone Number"
+              label="Unit Price"
               variant="outlined"
               color="secondary"
               required
