@@ -1,3 +1,4 @@
+import DashboardContainer from "@/components/DashboardContainer";
 import SlideBar from "@/components/SlideBar";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen">
       <SlideBar />
       <section className="pl-20 w-full">
-        <h1>Home</h1>
+        <DashboardContainer />
       </section>
     </main>
   );
