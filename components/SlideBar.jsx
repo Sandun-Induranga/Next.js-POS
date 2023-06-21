@@ -30,7 +30,7 @@ const SlideBar = () => {
       </Link>
 
       <Link
-        href="/customers"
+        href="/purchaseOrder"
         className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
       >
         <BsCart2 size={22} />
