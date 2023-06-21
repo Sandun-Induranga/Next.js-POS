@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import { FiEdit2 } from "react-icons/fi";
 import { MdPlaylistRemove } from "react-icons/md";
+import { Modal, ModalBody, ModalFooter, Button } from "reactstrap";
 
 const CustomersContainer = () => {
-  const [modelOpen, setModelOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="p-10 bg-gray-100 min-h-screen outline-none border-none">
@@ -57,6 +58,34 @@ const CustomersContainer = () => {
           </div>
         </li>
       </ul>
+      <Modal toggle={() => setModalOpen(!modalOpen)} isOpen={modalOpen}>
+        <div className=" modal-header">
+          <h5 className=" modal-title" id="exampleModalLabel">
+            Modal title
+          </h5>
+          <button
+            aria-label="Close"
+            className=" close"
+            type="button"
+            onClick={() => setModalOpen(!modalOpen)}
+          >
+            <span aria-hidden={true}>×</span>
+          </button>
+        </div>
+        <ModalBody>...</ModalBody>
+        <ModalFooter>
+          <Button
+            color="secondary"
+            type="button"
+            onClick={() => setModalOpen(!modalOpen)}
+          >
+            Close
+          </Button>
+          <Button color="primary" type="button">
+            Save changes
+          </Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 };
