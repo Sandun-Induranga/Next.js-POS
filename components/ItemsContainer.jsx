@@ -27,11 +27,11 @@ const ItemsContainer = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div className="p-10 bg-gray-100 min-h-screen outline-none border-none">
+    <div className="p-10 bg-gray-100 min-h-screen">
       <section className="flex sm:justify-between items-center sm:flex-row flex-col gap-4 mb-4">
         <input
           type="search"
-          className="lg:w-1/3 p-2 rounded-lg mb-2"
+          className="lg:w-1/3 p-2 rounded-lg mb-2 hover:outline-none"
           placeholder="Search"
         />
         <button
