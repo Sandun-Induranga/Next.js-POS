@@ -17,3 +17,5 @@ const CustomerSchema = new Schema({
     reruired: true,
   },
 });
+
+export default model("Customer", CustomerSchema);
