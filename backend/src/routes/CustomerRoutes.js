@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express from "express";
 import CustomerController from "../controllers/CustomerController.js";
 
 export default class CustomerRoutes {
