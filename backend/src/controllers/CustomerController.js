@@ -1,6 +1,8 @@
+import CustomerService from "../services/CustomerService";
+
 export default class CustomerController {
-  constructor({ customerService }) {
-    this.customerService = customerService;
+  constructor() {
+    this.customerService = new CustomerService();
   }
 
   async createCustomer(req, res) {
