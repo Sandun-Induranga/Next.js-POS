@@ -1,16 +1,18 @@
-require("dotenv").config();
-const express = require("express");
-const { json, urlencoded } = require("body-parser");
-const cors = require("cors");
-const db = require("mongoose");
-const routes = require("./routes");
+import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
+import db from "mongoose";
+import cors from "cors";
+import bodyParser from "body-parser";
+import Routes from "./routes/Routes";
+const { json, urlencoded } = bodyParser;
 
 const app = express();
 
 app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use("/", routes);
+app.use("/", new Routes().getRoutes());
 
 db.connect(process.env.MONGO_DB_URL)
   .then(() => {

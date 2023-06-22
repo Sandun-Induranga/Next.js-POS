@@ -1,6 +1,6 @@
 import Customer from "../models/Customer";
 
-module.export = class CustomerService {
+export default class CustomerService {
   async createCustomer(customer) {
     const createdCustomer = await new Customer().save(customer);
     return createdCustomer;
@@ -25,4 +25,4 @@ module.export = class CustomerService {
     await new Customer().delete(id);
     return true;
   }
-};
+}
