@@ -1,6 +1,6 @@
 import CustomerService from "../services/CustomerService";
 
-export default class CustomerController {
+module.export = class CustomerController {
   constructor() {
     this.customerService = new CustomerService();
   }
@@ -34,4 +34,4 @@ export default class CustomerController {
     await this.customerService.deleteCustomer(id);
     res.status(200).send({ message: "Customer deleted successfully" });
   }
-}
+};

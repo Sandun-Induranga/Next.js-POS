@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+
 const CustomerSchema = new Schema({
   customerId: {
     type: String,

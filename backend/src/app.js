@@ -1,10 +1,16 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();
+const { json, urlencoded } = require("body-parser");
 const cors = require("cors");
 const db = require("mongoose");
+const routes = require("./routes");
 
-app.get("/", (req, res) => {});
+const app = express();
+
+app.use(cors());
+app.use(json());
+app.use(urlencoded({ extended: true }));
+app.use("/", routes);
 
 db.connect(process.env.MONGO_DB_URL)
   .then(() => {
