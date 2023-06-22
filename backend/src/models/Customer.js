@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 const CustomerSchema = new Schema({
-  id: {
+  customerId: {
     type: String,
     reruired: true,
   },
