@@ -14,22 +14,22 @@ export default class CustomerRoutes {
       "/customers",
       this.customerController.post(this.customerController.createCustomer())
     );
-    this.router.get(
-      "/customers",
-      this.customerController.get(this.customerController.getCustomers())
-    );
-    this.router.get(
-      "/customers/:id",
-      this.customerController.get(this.customerController.getCustomer())
-    );
-    this.router.put(
-      "/customers/:id",
-      this.customerController.put(this.customerController.updateCustomer())
-    );
-    this.router.delete(
-      "/customers/:id",
-      this.customerController.delete(this.customerController.deleteCustomer())
-    );
+    // this.router.get(
+    //   "/customers",
+    //   this.customerController.get(this.customerController.getCustomers())
+    // );
+    // this.router.get(
+    //   "/customers/:id",
+    //   this.customerController.get(this.customerController.getCustomer())
+    // );
+    // this.router.put(
+    //   "/customers/:id",
+    //   this.customerController.put(this.customerController.updateCustomer())
+    // );
+    // this.router.delete(
+    //   "/customers/:id",
+    //   this.customerController.delete(this.customerController.deleteCustomer())
+    // );
   }
 
   getRoutes() {

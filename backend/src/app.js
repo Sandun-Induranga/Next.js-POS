@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use("/", new Routes().getRoutes());
+// app.use("/", new Routes().getRoutes());
 
 db.connect(process.env.MONGO_DB_URL)
   .then(() => {
