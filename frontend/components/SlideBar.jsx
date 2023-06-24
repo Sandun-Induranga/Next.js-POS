@@ -37,6 +37,13 @@ const SlideBar = (props) => {
     setIsPurchaseOrder(false);
   };
 
+  const focusPurchaseOrder = () => {
+    setIsDashboard(false);
+    setIsCustomers(false);
+    setIsItems(false);
+    setIsPurchaseOrder(true);
+  };
+
   return (
     <section className="w-20 h-screen bg-white border-r border-gray-200 flex items-center flex-col gap-6 fixed">
       <FiSlack size={40} className="mb-10 mt-2 text-purple-600" />
@@ -78,7 +85,12 @@ const SlideBar = (props) => {
 
       <Link
         href="/purchaseOrder"
-        className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
+        className={
+          isPurchaseOrder
+            ? "p-2 bg-purple-600 rounded-lg text-white"
+            : "p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
+        }
+        onClick={focusPurchaseOrder}
       >
         <BsCart2 size={22} />
       </Link>
