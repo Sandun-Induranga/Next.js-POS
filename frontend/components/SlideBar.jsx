@@ -12,22 +12,29 @@ const SlideBar = (props) => {
   const [isDashboard, setIsDashboard] = useState(props.name == "dashboard");
   const [isCustomers, setIsCustomers] = useState(props.name == "customers");
   const [isItems, setIsItems] = useState(props.name == "items");
+  const [isPurchaseOrder, setIsPurchaseOrder] = useState(
+    props.name == "purchaseOrder"
+  );
+
   const focusDashboard = () => {
     setIsDashboard(true);
     setIsCustomers(false);
     setIsItems(false);
+    setIsPurchaseOrder(false);
   };
 
   const focusCustomers = () => {
     setIsDashboard(false);
     setIsCustomers(true);
     setIsItems(false);
+    setIsPurchaseOrder(false);
   };
 
   const focusItems = () => {
     setIsDashboard(false);
     setIsCustomers(false);
     setIsItems(true);
+    setIsPurchaseOrder(false);
   };
 
   return (
