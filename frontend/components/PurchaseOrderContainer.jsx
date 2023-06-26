@@ -84,6 +84,17 @@ const PurchaseOrderContainer = () => {
             <MdPlaylistRemove size={18} className="text-red-400" />
           </div>
         </li>
+        <li className="grid grid-cols-6 justify-center text-center bg-white py-2 rounded-lg text-gray-600 mt-1">
+          <h1>ITM-001</h1>
+          <h1>Biscuit</h1>
+          <h1>1</h1>
+          <h1>120.00</h1>
+          <h1>120.00</h1>
+          <div className="flex justify-center gap-4">
+            <FiEdit2 size={18} className="text-green-400" />
+            <MdPlaylistRemove size={18} className="text-red-400" />
+          </div>
+        </li>
       </ul>
       <Modal
         open={open}
