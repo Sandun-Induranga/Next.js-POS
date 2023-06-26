@@ -43,6 +43,7 @@ const PurchaseOrderContainer = () => {
       </section>
 
       <aside className="grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 mb-8">
+        {/* Customer */}
         <select
           name=""
           id=""
@@ -61,6 +62,36 @@ const PurchaseOrderContainer = () => {
           type="text"
           className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
           placeholder="Address"
+        />
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Phone Number"
+        />
+        {/* Item */}
+        <select
+          name=""
+          id=""
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+        >
+          <option value="">Item Code</option>
+          <option value="">ITM-001</option>
+          <option value="">ITM-002</option>
+        </select>
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Description"
+        />
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Unit Price"
+        />
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Qty On Hand"
         />
       </aside>
 
