@@ -41,6 +41,29 @@ const PurchaseOrderContainer = () => {
           Add New Item
         </button>
       </section>
+
+      <aside className="grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-4 mb-8">
+        <select
+          name=""
+          id=""
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+        >
+          <option value="">Customer ID</option>
+          <option value="">C001</option>
+          <option value="">C002</option>
+        </select>
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Customer Name"
+        />
+        <input
+          type="text"
+          className="py-2 px-4 text-gray-600 rounded-lg bg-white focus:outline-none"
+          placeholder="Address"
+        />
+      </aside>
+
       <ul>
         <li className="grid grid-cols-6 justify-center text-center bg-purple-600 py-2 rounded-lg text-white mb-2">
           <h1>Item Code</h1>
