@@ -13,7 +13,7 @@ const SlideBar = (props) => {
   const [isCustomers, setIsCustomers] = useState(props.name == "customers");
   const [isItems, setIsItems] = useState(props.name == "items");
   const [isPurchaseOrder, setIsPurchaseOrder] = useState(
-    props.name == "purchaseOrder"
+    props.name == "purchaseOrders"
   );
 
   const focusDashboard = () => {
@@ -96,7 +96,7 @@ const SlideBar = (props) => {
       </Link>
 
       <Link
-        href="/customers"
+        href="/settings"
         className="p-2 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200"
       >
         <IoSettingsOutline size={22} />
